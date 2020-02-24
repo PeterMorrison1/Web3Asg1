@@ -10,7 +10,7 @@ export default class Production extends React.Component {
     }
 
     view = (id) => {
-        this.props.setViewCast(id);
+        this.props.setViewCast(this.props.cast.cast_id);
     }
     render() {
         return (
@@ -23,19 +23,17 @@ export default class Production extends React.Component {
                 gridColumn: 'span 1'
 
             }}>
-                {this.state.cast.map((c, index) => {
-                    return (
-                        <div>
+                {/* {this.state.cast.map((c, index) => { */}
 
-                            <Column> <div>{c.cast.name}</div></Column>
-                            <Column><div>{c.cast.character}</div></Column>
+                            <Column> <div>{this.props.cast.name}</div></Column>
+                            <Column><div>{this.props.cast.character}</div></Column>
                             <Column>
                                 <div>
 
-                                    <button onClick={this.view(c.cast.id)}> View</button>
+                                    <button onClick={this.view}> View</button>
                                 </div>
-                            </Column></div>)
-                })}
+                            </Column>
+                {/* } */}
                 {/* <Column> <div>{prop.cast.name}</div></Column>
         <Column><div>{prop.cast.character}</div></Column>
         <Column>

@@ -97,12 +97,12 @@ class MovieDetails extends React.Component {
                             <ProductionList>
                                 <div>
                                     
-                                    <Production cast={this.state.cast} crew={this.state.crew} setViewCast={this.setViewCast} closeView={this.closeView}></Production>
+                                    {/* <Production cast={this.state.cast} crew={this.state.crew} setViewCast={this.setViewCast} closeView={this.closeView}></Production> */}
                                     <h2> Production</h2>
                                     <u>Cast</u> <br />
-                                    {/* {this.state.cast.map((c, index) => {
+                                    {this.state.cast.map((c, index) => {
                                         return <Production key={index} setViewCast={this.setViewCast} cast={c} closeView={this.closeView} />
-                                    })} */}
+                                    })}
                                 </div>
                             </ProductionList>
                         </div>
